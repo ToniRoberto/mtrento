@@ -1,0 +1,1 @@
+!function(n){n(document).ready(function(){n(".map-container").click(function(){n(this).addClass("is-active")}),n("#form-contato").submit(function(n){n.preventDefault(),sendForm(this,"Envio-contato.php").catch(console.error)})})}(window.jQuery);

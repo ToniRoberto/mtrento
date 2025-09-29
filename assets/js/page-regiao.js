@@ -1,0 +1,1 @@
+jQuery(document).ready(function(i){let e='<img src="'+ASSETS+'img/icons/circle-arrow-left.svg"   alt=""></img>',r='<img src="'+ASSETS+'img/icons/circle-arrow-right.svg"  alt=""></img>';i(".slide-regiao").owlCarousel({autoplay:!1,loop:!1,margin:25,dots:!1,nav:!0,smartSpeed:800,responsive:{0:{items:1},577:{items:2},1024:{items:3}},navText:[e,r]})});

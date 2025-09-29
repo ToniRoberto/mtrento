@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Camada_2" data-name="Camada 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="27px" height="27px" viewBox="0 0 353.28 353.28">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #c9bca4;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 13px;
+      }
+
+      .cls-1, .cls-2 {
+        fill: none;
+      }
+
+      .cls-3 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-2" width="353.28" height="353.28"/>
+    </clipPath>
+  </defs>
+  <g id="Camada_1-2" data-name="Camada 1">
+    <g class="cls-3">
+      <path class="cls-1" d="m157.74,206.89v139.89H17.84c-6.26,0-11.34-5.08-11.34-11.34v-139.89h139.89c6.26,0,11.34,5.08,11.34,11.34Zm0,139.89h56.71M6.5,195.55v-56.71M63.21,6.5H17.84c-6.26,0-11.34,5.08-11.34,11.34v45.37M214.45,6.5h-75.62m207.95,132.33v75.62M290.07,6.5h45.37c6.26,0,11.34,5.08,11.34,11.34v45.37m-56.71,283.57h45.37c6.26,0,11.34-5.08,11.34-11.34v-45.37m-189.05-151.24h56.71v56.71"/>
+    </g>
+  </g>
+</svg>
