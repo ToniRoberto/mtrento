@@ -129,11 +129,13 @@
 	</script>
 	<!-- End Meta Pixel Code -->
 
-	
+
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Raleway:wght@300;400;500;600&display=swap"
+		rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
@@ -149,10 +151,38 @@
 				font-weight: 400;
 				font-style: normal;
 			}
-			
+
+			.carousel-container {
+				position: relative;
+				width: 100%;
+				/*height: 100vh; /* Ou a altura que você preferir */
+				overflow: hidden;
+			}
+
+			.li {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-size: cover;
+				background-position: center;
+				opacity: 0;
+				transition: opacity 1s ease-in-out;
+				z-index: 1;
+			}
+
+			.li.active {
+				opacity: 1;
+				z-index: 2;
+			}
+
+			/* Os estilos .overlay-bt, .overlay-lf, .wrap, .txt-banner, etc.,
+   podem permanecer como estão, pois eles dão o estilo ao conteúdo. */
 		</style>
 
-		<nav class="is-relative " role="navigation" aria-label="main navigation" style="font-family: 'Tenor Sans', sans-serif;">
+		<nav class="is-relative " role="navigation" aria-label="main navigation"
+			style="font-family: 'Tenor Sans', sans-serif;">
 
 			<div class="columns is-mobile is-vcentered mt0">
 
@@ -166,12 +196,13 @@
 						</picture>
 					</a>
 				</div>
-	
+
 				<!-- MENU -->
 
 				<div
 					class="column is-8-fullhd is-9-widescreen is-9-desktop is-9-tablet waypoint animation_right_d3 animated is-hidden-touch">
-					<div class="links is-relative" id="fontes" style="display: flex; justify-content: flex-end; gap: 100px;">
+					<div class="links is-relative" id="fontes"
+						style="display: flex; justify-content: flex-end; gap: 100px;">
 
 						<a href="index.html" class="">
 							Inicio </a>
@@ -229,8 +260,8 @@
 
 		<div class="container-menu" style="background-color: #B8996C;">
 
-			<div class="columns is-centered is-mobile" >
-				<div class="column is-12 has-text-centered" >
+			<div class="columns is-centered is-mobile">
+				<div class="column is-12 has-text-centered">
 
 					<picture>
 						<img src="assets/img/MTRENTO-BRANCA.png" alt="logo" class="logo waypoint animation_right_d2"
@@ -238,7 +269,7 @@
 					</picture>
 					<ul class="mt60 waypoint animation_right_dd1">
 
-							<li><a href="index.html" class="menu-item " data-text="A Gessele">
+						<li><a href="index.html" class="menu-item " data-text="A Gessele">
 								<span>Inicio</span>
 							</a></li>
 
@@ -254,7 +285,7 @@
 								<span>Porto Belo</span>
 							</a></li>
 
-						<li><a href="#" class="menu-item " data-text="Contato">
+						<li><a href="#contatos" class="menu-item " data-text="Contato">
 								<span>Contato</span>
 							</a></li>
 
@@ -264,11 +295,12 @@
 
 					<div class="redes-sociais has-text-centered-mobile mt50 mt30-mobile waypoint animation_right_d2">
 						<a href="https://api.whatsapp.com/send?phone=5547999056904&amp;text=Ol%C3%A1%2C+contato+do+site"
-							target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp" style="color: #fff;"></i></a>
+							target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"
+								style="color: #fff;"></i></a>
 						<a href="https://www.instagram.com" target="_blank" title="Instagram"><i
 								class="fa-brands fa-instagram" style="color: #fff;"></i></a> <a
-							href="https://www.youtube.com" target="_blank"
-							title="YouTube"><i class="fa-brands fa-youtube" style="color: #fff;"></i></a>
+							href="https://www.youtube.com" target="_blank" title="YouTube"><i
+								class="fa-brands fa-youtube" style="color: #fff;"></i></a>
 					</div>
 
 				</div>
@@ -279,10 +311,10 @@
 
 	</div>
 
-	
+
 	<main class="smooth-scroll-container">
 		<div class="smooth-scroll-content">
-			
+
 
 			<section class="section-banners xmarginTopHead waypoint animation_top animated pb0 is-relative z-index-1">
 
@@ -290,21 +322,139 @@
 					data-cycle-pause-on-hover="false" data-cycle-log="false" data-cycle-speed="1000"
 					data-cycle-pager-template="<span></span>">
 
+
+					<div class="carousel-container">
+						<div class="li active" style="background-image: url(uploads/imagens/banner-top.webp);"
+							fetchpriority="high">
+							<div class="overlay-bt"></div>
+							<div class="overlay-lf"></div>
+							<div class="wrap xis-relative">
+								<div class="txt-banner">
+									<style>
+										h1,
+										h2,
+										h3,
+										p,
+										span {
+											font-family: Tenor Sans;
+										}
+									</style>
+									<h1 class="box-letter">
+										<div class="color-white waypoint animation_bottom_dd1 fade-in-letter slow"
+											data-text="M TRENTO Empreendimentos"></div>
+									</h1>
+									<h3 class="box-letter">
+										<div class="color-white waypoint animation_bottom_dd2 fade-in-letter"
+											data-text="Our passion for building is in our roots."></div>
+									</h3>
+								</div>
+							</div>
+						</div>
+
+						<div class="li" style="background-image: url(uploads/imagens/banner-top1.webp);"
+							fetchpriority="high">
+							<div class="overlay-bt"></div>
+							<div class="overlay-lf"></div>
+							<div class="wrap xis-relative">
+								<div class="txt-banner">
+									<style>
+										h1,
+										h2,
+										h3,
+										p,
+										span {
+											font-family: Tenor Sans;
+										}
+									</style>
+									<h1 class="box-letter">
+										<div class="color-white waypoint animation_bottom_dd1 fade-in-letter slow"
+											data-text="Algum Título 2"></div>
+									</h1>
+									<h3 class="box-letter">
+										<div class="color-white waypoint animation_bottom_dd2 fade-in-letter"
+											data-text="Algum Subtítulo 2"></div>
+									</h3>
+								</div>
+							</div>
+						</div>
+
+						<div class="li" style="background-image: url(uploads/imagens/banner-top2.png);"
+							fetchpriority="high">
+							<div class="overlay-bt"></div>
+							<div class="overlay-lf"></div>
+							<div class="wrap xis-relative">
+								<div class="txt-banner">
+									<style>
+										h1,
+										h2,
+										h3,
+										p,
+										span {
+											font-family: Tenor Sans;
+										}
+									</style>
+									<h1 class="box-letter">
+										<div class="color-white waypoint animation_bottom_dd1 fade-in-letter slow"
+											data-text="Algum Título 3"></div>
+									</h1>
+									<h3 class="box-letter">
+										<div class="color-white waypoint animation_bottom_dd2 fade-in-letter"
+											data-text="Algum Subtítulo 3"></div>
+									</h3>
+								</div>
+							</div>
+						</div>
+
+						<div class="li" style="background-image: url(uploads/imagens/imagem4.webp);"
+							fetchpriority="high">
+							<div class="overlay-bt"></div>
+							<div class="overlay-lf"></div>
+							<div class="wrap xis-relative">
+								<div class="txt-banner">
+									<style>
+										h1,
+										h2,
+										h3,
+										p,
+										span {
+											font-family: Tenor Sans;
+										}
+									</style>
+									<h1 class="box-letter">
+										<div class="color-white waypoint animation_bottom_dd1 fade-in-letter slow"
+											data-text="Algum Título 4"></div>
+									</h1>
+									<h3 class="box-letter">
+										<div class="color-white waypoint animation_bottom_dd2 fade-in-letter"
+											data-text="Algum Subtítulo 4"></div>
+									</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+
+					<!--
 					<div class="li" style="background-image: url(uploads/imagens/banner-top.webp); "
 						fetchpriority="high">
-						
+
 						<div class="overlay-bt"></div>
 						<div class="overlay-lf"></div>
 
 						<div class="wrap xis-relative">
 							<div class="txt-banner">
 								<style>
-									h1, h2, h3, p, span{
+									h1,
+									h2,
+									h3,
+									p,
+									span {
 										font-family: Tenor Sans;
 									}
 								</style>
 
-								<h1 class="box-letter" >
+								<h1 class="box-letter">
 									<div class="color-white waypoint animation_bottom_dd1 fade-in-letter slow"
 										data-text="M TRENTO Empreendimentos"></div>
 								</h1>
@@ -317,6 +467,7 @@
 						</div>
 
 					</div>
+				-->
 				</div>
 
 
@@ -325,14 +476,16 @@
 						fetchpriority="auto">
 				</picture>
 			</section>
-		
 
-			<section class="section-empreendimentos is-relative bg-l-gray" id="empreendimentos" style="font-family: Tenor Sans; color: #000;">
+
+			<section class="section-empreendimentos is-relative bg-l-gray" id="empreendimentos"
+				style="font-family: Tenor Sans; color: #000;">
 
 				<div class="wrap is-relative pl40 pr40">
-					
+
 					<h2 class="mt20 mb10 mt10-mobile box-letter">
-						<div class="waypoint animation_bottom fade-in-letter" data-text="NOSSOS EMPREENDIMENTOS" style="font-family: Tenor Sans; color: #000;"> </div>
+						<div class="waypoint animation_bottom fade-in-letter" data-text="NOSSOS EMPREENDIMENTOS"
+							style="font-family: Tenor Sans; color: #000;"> </div>
 					</h2>
 
 					<p class="waypoint animation_bottom" style="font-family: Tenor Sans; color: #000;">
@@ -343,7 +496,7 @@
 
 					<div
 						class="slide-emp owl-carousel owl-theme mt80 mt40-tablet mt40-mobile waypoint animation_bottom">
-						
+
 						<!--PRIMEIRO EMPREENDIMENTO-->
 						<div class="columns is-variable is-7-tablet is-3-mobile">
 
@@ -359,7 +512,8 @@
 											</picture>
 										</div>
 
-										<img src="assets/img/imggaleriaprovince/img1.webp" alt="Province dI Trento" style="height: 600px;">
+										<img src="assets/img/imggaleriaprovince/img1.webp" alt="Province dI Trento"
+											style="height: 600px;">
 									</figure>
 
 									<!-- <div class="cat has-text-centered mt15 mt30-mobile is-uppercase"></div> -->
@@ -371,7 +525,7 @@
 								class="column is-2-widescreen is-2-desktop is-1-tablet is-hidden-mobile has-text-centered">
 
 								<picture>
-									
+
 								</picture>
 							</div>
 
@@ -402,7 +556,8 @@
 												</picture>
 											</div>
 											<div class="column is-narrow pl5">
-												<p class="fs-18" style="font-family: Tenor Sans; color: #000;">60% obra concluída</p>
+												<p class="fs-18" style="font-family: Tenor Sans; color: #000;">60% obra
+													concluída</p>
 											</div>
 										</div>
 
@@ -410,7 +565,8 @@
 
 										<a href="empreendimento/province/en.html"
 											class="btn waypoint animation_bottom mt40 mt20-tablet mt30-mobile"
-											data-text="Conheça o Empreendimento" style="font-family: Tenor Sans; color: #000;"><span>Conheça o
+											data-text="Conheça o Empreendimento"
+											style="font-family: Tenor Sans; color: #000;"><span>Conheça o
 												Empreendimento</span></a>
 									</div>
 								</div>
@@ -432,10 +588,11 @@
 											</picture>
 										</div>
 
-										<img src="assets/img/imggaleriaduomo/img1.webp" alt="Duomo dI Trento" style="height: 600px;">
+										<img src="assets/img/imggaleriaduomo/img1.webp" alt="Duomo dI Trento"
+											style="height: 600px;">
 									</figure>
 
-									
+
 								</a>
 							</div>
 
@@ -444,7 +601,7 @@
 								class="column is-2-widescreen is-2-desktop is-1-tablet is-hidden-mobile has-text-centered">
 
 								<picture>
-								
+
 								</picture>
 							</div>
 
@@ -453,7 +610,8 @@
 								class="column is-5-widescreen is-5-desktop is-6-tablet box-inf pl20 pr30 pl0-tablet pl10-mobile pr10-mobile">
 								<div class="into mt20">
 
-									<img src="assets/img/imggaleriaduomo/Logo_Final_sem_fundo.png" alt="George VI" class="logo">
+									<img src="assets/img/imggaleriaduomo/Logo_Final_sem_fundo.png" alt="George VI"
+										class="logo">
 
 									<div class="mt50 mt20-tablet mt40-mobile has-text-centered-mobile">
 
@@ -483,10 +641,10 @@
 								</div>
 							</div>
 						</div>
-					
+
 					</div>
 
-			
+
 
 				</div>
 
@@ -526,13 +684,14 @@
 							<!-- <p class="font-big color-primary mt50 mt30-mobile waypoint animation_bottom_dd1">Arquitetura Exclusiva</p> -->
 
 							<div class="font-big color-primary mt50 mt30-mobile box-letter">
-								<div class="waypoint animation_bottom_dd1 fade-in-letter"
-									data-text="História" style="font-family: Tenor Sans; color: #000;" data-delay="600">
+								<div class="waypoint animation_bottom_dd1 fade-in-letter" data-text="História"
+									style="font-family: Tenor Sans; color: #000;" data-delay="600">
 									<span class="holder">Placeholder</span>
 								</div>
 							</div>
 
-							<p class="mt30 mt10-mobile waypoint animation_bottom_dd1" style="font-family: Tenor Sans; color: #000;">
+							<p class="mt30 mt10-mobile waypoint animation_bottom_dd1"
+								style="font-family: Tenor Sans; color: #000;">
 								A MTrento nasceu do sonho de Juvenal Martini, Ricardo Marchiori e Vali Melo
 								em empreender e deixar um legado. Desde os 20 anos, eles compartilharam o
 								desejo de construir algo próprio, trazendo consigo a experiência e tradição da
@@ -540,6 +699,9 @@
 								sonho em realidade, fundando a construtora.
 							</p>
 
+							<a href="sobre/en.html"
+								class="btn waypoint animation_bottom_dd2 mt50 mt30-tablet mt30-mobile mb0"
+								data-text="Conheça a Mtrento"><span>Conheça a MTrento</span></a>
 
 							<div class="is-hidden-tablet mt50 pl10 pr10">
 
@@ -556,15 +718,18 @@
 				</div>
 
 				<style>
-					#fontes2 span, p, div {
+					#fontes2 span,
+					p,
+					div {
 						font-family: "Tenor Sans", sans-serif;
 						font-weight: 400;
 						font-style: normal;
 					}
 				</style>
-				<div class="section-numeros wrap mt80 mt40-mobile is-relative" id="fontes2" style="font-family: Tenor Sans; color: #000;">
+				<div class="section-numeros wrap mt80 mt40-mobile is-relative" id="fontes2"
+					style="font-family: Tenor Sans; color: #000;">
 
-					<div 
+					<div
 						class="columns is-mobile is-multiline is-centered has-text-left-widescreen has-text-centered-tablet has-text-centered-mobile">
 						<div
 							class="column is-4-widescreen is-4-desktop is-12-tablet is-12-mobile pr70 pr30-tablet pl30-mobile pr30-mobile">
@@ -642,13 +807,14 @@
 
 						<picture>
 							<source srcset="assets/img/imggaleriaprovince/img14.webp">
-							<img src="#" alt=""
-								class="bdr1 is-block waypoint animation_bottom" loading="lazy" fetchpriority="auto">
+							<img src="#" alt="" class="bdr1 is-block waypoint animation_bottom" loading="lazy"
+								fetchpriority="auto">
 						</picture>
 						<div class="line waypoint animation_scale_y_d1 is-hidden-mobile"></div>
 
 
-						<div class="box-symbol waypoint animation_scale" style="padding: 18px; background-color: #5C4633;">
+						<div class="box-symbol waypoint animation_scale"
+							style="padding: 18px; background-color: #5C4633;">
 
 							<picture>
 								<img src="assets/img/MTRENTO-BRANCA-logo.png" alt="" class="is-block" loading="lazy"
@@ -659,7 +825,8 @@
 				</div>
 			</section>
 
-			<section class="section-regiao mt90 mt50-tablet mt50-mobile" style="background-image: url('assets/img/portoBeloImg.png');">
+			<section class="section-regiao mt90 mt50-tablet mt50-mobile"
+				style="background-image: url('assets/img/portoBeloImg.png');">
 				<div class="wrap wide pl20-mobile pr20-mobile">
 
 					<div class="columns is-mobile mt190 mt70-mobile is-gapless bdr1" style="background-color: #5C4633;">
@@ -669,7 +836,7 @@
 
 
 							<picture>
-								
+
 							</picture>
 						</div>
 
@@ -680,7 +847,8 @@
 								<!-- <h2 class="mb20 color-light waypoint animation_bottom">POR QUE ITAPEMA?</h2> -->
 
 								<h2 class="mb20 color-light box-letter">
-									<div class="waypoint animation_bottom fade-in-letter" data-text="Porque Porto Belo??">
+									<div class="waypoint animation_bottom fade-in-letter"
+										data-text="Porque Porto Belo??">
 										<span class="holder">Placeholder</span>
 									</div>
 								</h2>
@@ -813,8 +981,8 @@
 					<div class="has-text-centered mt70 mt40-mobile">
 
 						<p class="waypoint animation_bottom">Conte também sua experiência com a nossa empresa.</p>
-						<a href="#" class="btn waypoint animation_bottom_dd2"
-							target="_blank" data-text="Deixe seu depoimento"><span>Deixe seu depoimento</span></a>
+						<a href="#" class="btn waypoint animation_bottom_dd2" target="_blank"
+							data-text="Deixe seu depoimento"><span>Deixe seu depoimento</span></a>
 					</div>
 
 				</div>
@@ -857,7 +1025,7 @@
 				</div>
 			</div>
 
-		
+
 
 			<footer class=" is-relative" style="background-color: #B8996C;">
 
@@ -871,8 +1039,8 @@
 
 
 							<picture>
-								<img src="assets/img/MTRENTO-BRANCA.png" style="width: 200px; height: 200px;" alt="logo" class="logo" loading="lazy"
-									fetchpriority="auto">
+								<img src="assets/img/MTRENTO-BRANCA.png" style="width: 200px; height: 200px;" alt="logo"
+									class="logo" loading="lazy" fetchpriority="auto">
 							</picture>
 
 							<div class="h3 mt50 pt5" style="color: #fff;">NOSSO ESCRITÓRIO</div>
@@ -896,10 +1064,10 @@
 
 						<div
 							class="column is-3-tablet is-12-mobile mt80 mt40-tablet mt40-mobile waypoint animation_right_d1 is-order-0-mobile pb0-mobile">
-							
+
 							<nav>
 								<a href="index.html" class="is-active" style="color: #fff;">Home</a>
-								
+
 								<a href="#inicio" class="">A Mtrento</a>
 
 								<a href="#empreendimentos" class="">Empreendimentos</a>
@@ -907,7 +1075,7 @@
 								<a href="regiao/en.html" class="">Porto Belo</a>
 
 								<a href="#contatos" class="">Contato</a>
-							
+
 							</nav>
 
 						</div>
@@ -915,26 +1083,25 @@
 
 
 
-						<div
-							class="column is-3-tablet is-12-mobile mt60 mt40-tablet mt50-mobile waypoint animation_right_d2 pt0-mobile" id="contatos">
+						<div class="column is-3-tablet is-12-mobile mt60 mt40-tablet mt50-mobile waypoint animation_right_d2 pt0-mobile"
+							id="contatos">
 
 
 							<div class="h3 mt20 mt50-mobile" style="color: #fff;">NOSSAS REDES SOCIAIS</div>
 
 							<div class="redes-sociais">
 								<!-- <a href="https://api.whatsapp.com/send?phone=5547999056904&text=Ol%C3%A1%2C+contato+do+site" 	target="_blank" title="WhatsApp"><i class="fa fa-whatsapp"></i></a> -->
-								<a href="https://www.instagram.com/mtrento/" target="_blank"
-									title="Instagram"><i class="fa-brands fa-whatsapp"></i></a>
+								<a href="https://www.instagram.com/mtrento/" target="_blank" title="Instagram"><i
+										class="fa-brands fa-whatsapp"></i></a>
 								<!-- <a href="https://www.gesseleempreendimentos.com.brcontato/" 					target="_blank" title="Contato"><i class="fa fa-envelope-o"></i></a> -->
 
-								<a href="https://www.youtube.com" target="_blank"
-									title="Youtube"><i class="fa-brands fa-youtube"></i></a> <a
-									href="https://www.linkedin.com" target="_blank"
-									title="Linkedin"><i class="fa-brands fa-linkedin"></i></a>
+								<a href="https://www.youtube.com" target="_blank" title="Youtube"><i
+										class="fa-brands fa-youtube"></i></a> <a href="https://www.linkedin.com"
+									target="_blank" title="Linkedin"><i class="fa-brands fa-linkedin"></i></a>
 							</div>
 						</div>
 
-						
+
 						<div
 							class="column is-3-tablet is-12-mobile mt60 mt40-tablet mt50-mobile waypoint animation_right_d3">
 
@@ -944,12 +1111,13 @@
 								<div class="column is-narrow-tablet is-4-mobile pr25-mobile">
 									<p><i class="fa-solid fa-phone-volume" style="color: #fff;"></i> (47) 99905-6904</p>
 									<p><i class="fa-brands fa-whatsapp" style="color: #fff;"></i> (47) 9 9710-1001</p>
-									<p><i class="fa-brands fa-instagram" style="color: #fff;"></i> @mtrentoempreendimentos</p>
+									<p><i class="fa-brands fa-instagram" style="color: #fff;"></i>
+										@mtrentoempreendimentos</p>
 								</div>
 							</div>
 
 						</div>
-					
+
 					</div>
 
 
@@ -963,8 +1131,8 @@
 
 						<div style="color: #fff;"
 							class="column is-6-tablet is-12-mobile direitos has-text-right has-text-centered-mobile waypoint animation_right_dd1  ">
-							<a href="https://api.whatsapp.com/send?phone=5593991931185&text=Ol%C3%A1%2C+quero+criar+um+site+para+minha+empresa" target="_blank"
-								title="QUAX - Sites & Sistemas">Desenvolvimento Toni</a>
+							<a href="https://api.whatsapp.com/send?phone=5593991931185&text=Ol%C3%A1%2C+quero+criar+um+site+para+minha+empresa"
+								target="_blank" title="QUAX - Sites & Sistemas">Desenvolvimento Toni</a>
 						</div>
 					</div>
 
@@ -975,12 +1143,12 @@
 			</footer>
 
 
-<script>
-document.querySelector('a[href="#inicio"]').addEventListener('click', function(e) {
-    e.preventDefault();
-    document.getElementById('inicio').scrollIntoView({ behavior: 'smooth' });
-});
-</script>
+			<script>
+				document.querySelector('a[href="#inicio"]').addEventListener('click', function (e) {
+					e.preventDefault();
+					document.getElementById('inicio').scrollIntoView({ behavior: 'smooth' });
+				});
+			</script>
 
 
 
@@ -1000,7 +1168,8 @@ document.querySelector('a[href="#inicio"]').addEventListener('click', function(e
 		</div>
 
 		<div class="btns is-flex" style="background-color: #B8996C;">
-			<a href="tel:+55(47) 3268-3754" class="ml0"><i class="fa-solid fa-phone-volume" style="color: #fff;"></i></a>
+			<a href="tel:+55(47) 3268-3754" class="ml0"><i class="fa-solid fa-phone-volume"
+					style="color: #fff;"></i></a>
 			<a href="contato/en.html"><i class="fa-regular fa-envelope" style="color: #fff;"></i></a>
 			<a href="https://api.whatsapp.com/send?phone=5547999056904&amp;text=Ol%C3%A1%2C+contato+do+site"
 				target="_blank"><i class="fa-brands fa-whatsapp" style="color: #fff;"></i></i></a>
@@ -1038,6 +1207,27 @@ document.querySelector('a[href="#inicio"]').addEventListener('click', function(e
 
 	<script type="text/javascript" async
 		src="../d335luupugsy2.cloudfront.net/js/loader-scripts/8e0143f3-d4a2-41d8-a747-89ca78cbb0b7-loader.js"></script>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', (event) => {
+    const slides = document.querySelectorAll('.carousel-container .li');
+    let currentSlide = 0;
+
+    function showNextSlide() {
+        // Remove a classe 'active' do slide atual
+        slides[currentSlide].classList.remove('active');
+
+        // Calcula o índice do próximo slide
+        currentSlide = (currentSlide + 1) % slides.length;
+
+        // Adiciona a classe 'active' ao próximo slide
+        slides[currentSlide].classList.add('active');
+    }
+
+    // Altere este valor de 5000 para 2000
+    setInterval(showNextSlide, 2000);
+});
+	</script>
 </body>
 
 <!-- Mirrored from www.gesseleempreendimentos.com.br/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 25 Sep 2025 13:52:33 GMT -->
