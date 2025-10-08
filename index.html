@@ -106,7 +106,7 @@
 	</script>
 
 
-	
+
 	<!-- Meta Pixel Code -->
 	<script>
 		!function (f, b, e, v, n, t, s) {
@@ -142,6 +142,10 @@
 
 		<!-- <div> -->
 		<style>
+			body {
+				background-color: #ffffff;
+			}
+
 			#fontes a {
 				font-family: "Tenor Sans", sans-serif;
 				font-weight: 400;
@@ -153,7 +157,11 @@
 				width: 100%;
 				/*height: 100vh; /* Ou a altura que você preferir */
 				overflow: hidden;
-				background-color: #B8996C;
+
+			}
+
+			.overlay-bt {
+				background-color: rgba(0, 0, 0, 0.4);
 			}
 
 			.li {
@@ -164,8 +172,8 @@
 				height: 100%;
 				background-size: cover;
 				background-position: center;
-				opacity: 0;
-				transition: opacity 1s ease-in-out;
+				opacity: 1;
+				transition: opacity 1s;
 				z-index: 1;
 			}
 
@@ -175,8 +183,8 @@
 			}
 
 			.owl-nav {
-  display: none !important;
-}
+				display: none !important;
+			}
 
 			/* Os estilos .overlay-bt, .overlay-lf, .wrap, .txt-banner, etc.,
    podem permanecer como estão, pois eles dão o estilo ao conteúdo. */
@@ -319,13 +327,14 @@
 
 			<section class="section-banners xmarginTopHead waypoint animation_top animated pb0 is-relative z-index-1">
 
-				<div class="cycle-slideshow is-clipped" data-cycle-slides=".li" data-cycle-timeout="8000"
-					data-cycle-pause-on-hover="false" data-cycle-log="false" data-cycle-speed="1000"
+				<div class="cycle-slideshow is-clipped" data-cycle-slides=".li" data-cycle-timeout="4000"
+					data-cycle-pause-on-hover="false" data-cycle-log="false" data-cycle-speed="990"
 					data-cycle-pager-template="<span></span>">
 
 
 					<div class="carousel-container">
-						<div class="li active" style="background-image: url(uploads/imagens/banner-top.webp);"
+						<div class="li active"
+							style="background-color: #B8996C; background-image: url(uploads/imagens/banner-top.webp);"
 							fetchpriority="high">
 							<div class="overlay-bt"></div>
 							<div class="overlay-lf"></div>
@@ -352,7 +361,8 @@
 							</div>
 						</div>
 
-						<div class="li" style="background-image: url(uploads/imagens/banner-top1.webp);"
+						<div class="li"
+							style="background-color: #B8996C; background-image: url(uploads/imagens/banner-top1.webp);"
 							fetchpriority="high">
 							<div class="overlay-bt"></div>
 							<div class="overlay-lf"></div>
@@ -379,7 +389,8 @@
 							</div>
 						</div>
 
-						<div class="li" style="background-image: url(uploads/imagens/banner-top2.png);"
+						<div class="li"
+							style="background-color: #B8996C; background-image: url(uploads/imagens/banner-top2.png);"
 							fetchpriority="high">
 							<div class="overlay-bt"></div>
 							<div class="overlay-lf"></div>
@@ -406,7 +417,8 @@
 							</div>
 						</div>
 
-						<div class="li" style="background-image: url(uploads/imagens/imgPortoBelo.jpg);"
+						<div class="li"
+							style="background-color: #B8996C; background-image: url(uploads/imagens/imgPortoBelo.jpg);"
 							fetchpriority="high">
 							<div class="overlay-bt"></div>
 							<div class="overlay-lf"></div>
@@ -436,39 +448,7 @@
 
 
 
-					<!--
-					<div class="li" style="background-image: url(uploads/imagens/banner-top.webp); "
-						fetchpriority="high">
 
-						<div class="overlay-bt"></div>
-						<div class="overlay-lf"></div>
-
-						<div class="wrap xis-relative">
-							<div class="txt-banner">
-								<style>
-									h1,
-									h2,
-									h3,
-									p,
-									span {
-										font-family: Tenor Sans;
-									}
-								</style>
-
-								<h1 class="box-letter">
-									<div class="color-white waypoint animation_bottom_dd1 fade-in-letter slow"
-										data-text="M TRENTO Empreendimentos"></div>
-								</h1>
-
-								<h3 class="box-letter">
-									<div class="color-white waypoint animation_bottom_dd2 fade-in-letter"
-										data-text="Our passion for building is in our roots."></div>
-								</h3>
-							</div>
-						</div>
-
-					</div>
-				-->
 				</div>
 
 
@@ -479,9 +459,13 @@
 			</section>
 
 
-			<section class="section-empreendimentos is-relative bg-l-gray" id="empreendimentos"
-				style="font-family: Tenor Sans; color: #000;">
-
+			<section class="section-empreendimentos is-relative " id="empreendimentos" style="font-family: Tenor Sans; 
+					   color: #000; 
+					   background-image: url(assets/img/ImgFundoNew2.JPG);
+					   background-repeat: no-repeat;
+					   background-size: cover;
+			">
+				
 				<div class="wrap is-relative pl40 pr40">
 
 					<h2 class="mt20 mb10 mt10-mobile box-letter">
@@ -495,29 +479,19 @@
 					</p>
 					<p style="font-size: 10pt;"><i><b>Araste para o lado, para ver o proximo empreendimento!</b></i></p>
 
-					<div
-						class="slide-emp mt80 mt40-tablet mt40-mobile animation_bottom">
+					<div class="slide-emp mt80 mt40-tablet mt40-mobile animation_bottom">
 
 						<!--PRIMEIRO EMPREENDIMENTO-->
 						<div class="columns is-variable is-7-tablet is-3-mobile">
-
 							<div class="column is-5 box-img pr25 pr0-tablet pr12-mobile" id="fontes">
 								<a href="#" class="card-emp">
 									<figure class="is-relative is-clipped">
-
 										<div class="overlay"></div>
-										
-
 										<img src="assets/img/imggaleriaprovince/img1.webp" alt="Province dI Trento"
 											style="height: 600px;">
 									</figure>
-
-									<!-- <div class="cat has-text-centered mt15 mt30-mobile is-uppercase"></div> -->
 								</a>
 							</div>
-
-
-
 
 							<div
 								class="column is-5-widescreen is-5-desktop is-6-tablet box-inf pl20 pr30 pl0-tablet pl10-mobile pr10-mobile">
@@ -527,14 +501,9 @@
 										alt="Province dI Trento" class="logo">
 
 									<div class="mt50 mt20-tablet mt40-mobile has-text-centered-mobile">
-
 										<p class="fs-18 frase color-primary has-text-weight-semibold is-uppercase mb15">
 										</p>
-
 										<p class="mb60 mb30-tablet mb40-mobile"></p>
-
-
-
 
 										<div class="columns mb10 is-mobile is-vcentered box-text">
 											<div class="column is-narrow">
@@ -549,29 +518,20 @@
 													concluída</p>
 											</div>
 										</div>
-
-
-
 										<a href="empreendimento/province/en.html"
 											class="btn waypoint animation_bottom mt40 mt20-tablet mt30-mobile"
 											data-text="Conheça o Empreendimento"
-											style="font-family: Tenor Sans; color: #fff; background-color: #B8996C;"><span>Conheça o
+											style="font-family: Tenor Sans; color: #fff; background-color: #B8996C;"><span>Conheça
+												o
 												Empreendimento</span></a>
 									</div>
 								</div>
 							</div>
 						</div>
-
-						
-
 					</div>
 
 
-					<div
-						class="slide-emp owl-theme mt80 mt40-tablet mt40-mobile waypoint animation_bottom">
-
-						
-
+					<div class="slide-emp owl-theme mt80 mt40-tablet mt40-mobile waypoint animation_bottom">
 						<!--SEGUNDO EMPREENDIMENTO-->
 						<div class="columns is-variable is-7-tablet is-3-mobile">
 
@@ -580,13 +540,84 @@
 									<figure class="is-relative is-clipped">
 
 										<div class="overlay"></div>
-										
-
 										<img src="assets/img/imggaleriaduomo/img1.webp" alt="Duomo dI Trento"
 											style="height: 600px;">
 									</figure>
+								</a>
+							</div>
 
+							<div
+								class="column is-5-widescreen is-5-desktop is-6-tablet box-inf pl20 pr30 pl0-tablet pl10-mobile pr10-mobile">
+								<div class="into mt20">
+									<!--
+									<img src="assets/img/imggaleriaduomo/Logo_Final_sem_fundo.png" alt="duomo"
+										class="logo">
+									-->
+									<img src="assets/img/LogoDuomoBRANCO.png" alt="duomo" class="logo">
 
+									<div class="mt50 mt20-tablet mt40-mobile has-text-centered-mobile">
+										<p class="fs-18 frase color-primary has-text-weight-semibold is-uppercase mb15">
+										</p>
+										<p class="mb60 mb30-tablet mb40-mobile"></p>
+										<div class="columns mb10 is-mobile is-vcentered box-text">
+											<div class="column is-narrow">
+
+												<picture>
+													<img src="assets/img/icons/park.svg" alt="icone" class="is-block"
+														loading="lazy" fetchpriority="auto">
+												</picture>
+											</div>
+											<div class="column is-narrow pl5">
+												<p class="fs-18" style="color: #fff;">11% obra concluída</p>
+											</div>
+										</div>
+										<a href="empreendimento/duomo/en.html"
+											class="btn waypoint animation_bottom mt40 mt20-tablet mt30-mobile"
+											data-text="Conheça o Empreendimento"
+											style="font-family: Tenor Sans; color: #fff; background-color: #B8996C;"><span>Conheça
+												o
+												Empreendimento</span></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!--Sessão de Empreendimentos-->
+<!--
+			<section class="section-empreendimentos is-relative " id="empreendimentos" style="font-family: Tenor Sans; 
+					   color: #000; 
+					   background-image: url(assets/img/ImgFundoNew2.JPG);
+					   background-repeat: no-repeat;
+					   background-size: cover;
+			">
+
+				<div class="wrap is-relative pl40 pr40">
+
+					<h2 class="mt20 mb10 mt10-mobile box-letter">
+						<div class="waypoint animation_bottom fade-in-letter" data-text="NOSSOS EMPREENDIMENTOS"
+							style="font-family: Tenor Sans; color: #000;"> </div>
+					</h2>
+
+					<p class="waypoint animation_bottom" style="font-family: Tenor Sans; color: #000;">
+						Conheça nossos empreendimentos em Porto Belo, criados para quem valoriza excelência,
+						requinte e exclusividade.
+					</p>
+					<p style="font-size: 10pt;"><i><b>Araste para o lado, para ver o proximo empreendimento!</b></i></p>
+
+					<div class="slide-emp mt80 mt40-tablet mt40-mobile animation_bottom">
+
+						--PRIMEIRO EMPREENDIMENTO--
+						<div class="columns is-variable is-7-tablet is-3-mobile">
+							<div class="column is-5 box-img pr25 pr0-tablet pr12-mobile" id="fontes">
+								<a href="#" class="card-emp">
+									<figure class="is-relative is-clipped">
+										<div class="overlay"></div>
+										<img src="assets/img/imggaleriaprovince/img1.webp" alt="Province dI Trento"
+											style="height: 600px;">
+									</figure>
 								</a>
 							</div>
 
@@ -594,14 +625,12 @@
 								class="column is-5-widescreen is-5-desktop is-6-tablet box-inf pl20 pr30 pl0-tablet pl10-mobile pr10-mobile">
 								<div class="into mt20">
 
-									<img src="assets/img/imggaleriaduomo/Logo_Final_sem_fundo.png" alt="George VI"
-										class="logo">
+									<img src="assets/img/imggaleriaprovince/Logo_Final sem fundo.png"
+										alt="Province dI Trento" class="logo">
 
 									<div class="mt50 mt20-tablet mt40-mobile has-text-centered-mobile">
-
 										<p class="fs-18 frase color-primary has-text-weight-semibold is-uppercase mb15">
 										</p>
-
 										<p class="mb60 mb30-tablet mb40-mobile"></p>
 
 										<div class="columns mb10 is-mobile is-vcentered box-text">
@@ -613,28 +642,80 @@
 												</picture>
 											</div>
 											<div class="column is-narrow pl5">
-												<p class="fs-18">11% obra concluída</p>
+												<p class="fs-18" style="font-family: Tenor Sans; color: #000;">60% obra
+													concluída</p>
 											</div>
 										</div>
-
-										<a href="empreendimento/duomo/en.html"
+										<a href="empreendimento/province/en.html"
 											class="btn waypoint animation_bottom mt40 mt20-tablet mt30-mobile"
-											data-text="Conheça o Empreendimento" 
-											style="font-family: Tenor Sans; color: #fff; background-color: #B8996C;"><span>Conheça o
+											data-text="Conheça o Empreendimento"
+											style="font-family: Tenor Sans; color: #fff; background-color: #B8996C;"><span>Conheça
+												o
 												Empreendimento</span></a>
 									</div>
 								</div>
 							</div>
 						</div>
 
+
+
+						<div class="slide-emp owl-theme mt80 mt40-tablet mt40-mobile waypoint animation_bottom">
+							--SEGUNDO EMPREENDIMENTO--
+							<div class="columns is-variable is-7-tablet is-3-mobile">
+
+								<div class="column is-5 box-img pr25 pr0-tablet pr12-mobile">
+									<a href="empreendimento/duomo/en.html" class="card-emp">
+										<figure class="is-relative is-clipped">
+
+											<div class="overlay"></div>
+											<img src="assets/img/imggaleriaduomo/img1.webp" alt="Duomo dI Trento"
+												style="height: 600px;">
+										</figure>
+									</a>
+								</div>
+
+								<div
+									class="column is-5-widescreen is-5-desktop is-6-tablet box-inf pl20 pr30 pl0-tablet pl10-mobile pr10-mobile">
+									<div class="into mt20">
+										-
+									<img src="assets/img/imggaleriaduomo/Logo_Final_sem_fundo.png" alt="duomo"
+										class="logo">
+									--
+										<img src="assets/img/LogoDuomoBRANCO.png" alt="duomo" class="logo">
+
+										<div class="mt50 mt20-tablet mt40-mobile has-text-centered-mobile">
+											<p
+												class="fs-18 frase color-primary has-text-weight-semibold is-uppercase mb15">
+											</p>
+											<p class="mb60 mb30-tablet mb40-mobile"></p>
+											<div class="columns mb10 is-mobile is-vcentered box-text">
+												<div class="column is-narrow">
+
+													<picture>
+														<img src="assets/img/icons/park.svg" alt="icone"
+															class="is-block" loading="lazy" fetchpriority="auto">
+													</picture>
+												</div>
+												<div class="column is-narrow pl5">
+													<p class="fs-18" style="color: #fff;">11% obra concluída</p>
+												</div>
+											</div>
+											<a href="empreendimento/duomo/en.html"
+												class="btn waypoint animation_bottom mt40 mt20-tablet mt30-mobile"
+												data-text="Conheça o Empreendimento"
+												style="font-family: Tenor Sans; color: #fff; background-color: #B8996C;"><span>Conheça
+													o
+													Empreendimento</span></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
-
-
-
 				</div>
-
 			</section>
-
+-->
+			<!--Sessão de Empreendimentos-->
 
 			<section class="section-1 is-relative" style="background-color: #B8996C;" id="inicio">
 
@@ -649,7 +730,7 @@
 							class="column is-6-tablet is-12-mobile pl10-mobile pr10-mobile mt30-mobile is-relative is-hidden-mobile">
 
 							<picture>
-								<img src="assets/img/MTRENTO-BRANCA.png" alt=""
+								<img src="assets/img/imgHistoria.jpg" alt=""
 									class="bdr2 img waypoint animation_left_dd2 z-index-1" loading="lazy"
 									fetchpriority="auto">
 							</picture>
@@ -663,11 +744,10 @@
 							class="column is-5-tablet is-12-mobile mt30 mt0-tablet pr70 pr30-tablet pl0-tablet pr12-mobile is-relative z-index-1 has-text-centered-mobile">
 							<!--
 							<picture>
-								<img src="assets/img/MTRENTO-BRANCA.png" style="width: 200px; height: 130px;" alt="logo"
+								<img src="assets/img/MTRENTO-BRANCA.png" style="width: 250px; height: 180px;" alt="logo"
 									class="logo waypoint animation_bottom_dd1" loading="lazy" fetchpriority="auto">
 							</picture>
-							 <p class="font-big color-primary mt50 mt30-mobile waypoint animation_bottom_dd1">Arquitetura Exclusiva</p> -->
-
+							-->
 							<div class="font-big color-primary mt50 mt30-mobile box-letter">
 								<div class="waypoint animation_bottom_dd1 fade-in-letter" data-text=""
 									style="font-family: Tenor Sans; color: #000;" data-delay="600">
@@ -687,15 +767,11 @@
 							-->
 							<a href="sobre/en.html"
 								class="btn waypoint animation_bottom_dd2 mt50 mt30-tablet mt30-mobile mb0"
-								data-text="clique aqui e conheça nossa história" style="font-family: Tenor Sans; color: #fff; background-color: #5C4633;"><span>clique aqui e conheça nossa história</span></a>
+								data-text="clique aqui e conheça nossa história"
+								style="font-family: Tenor Sans; color: #fff; background-color: #5C4633;"><span>clique
+									aqui e conheça nossa história</span></a>
 
-							<div class="is-hidden-tablet mt50 pl10 pr10">
 
-								<picture>
-									<img src="assets/img/home-gessele.webp" alt=""
-										class="bdr2 img waypoint animation_bottom" loading="lazy" fetchpriority="auto">
-								</picture>
-							</div>
 
 						</div>
 
@@ -797,11 +873,13 @@
 
 
 
-			<section class="section-block-3 pt80 pt40-tablet pt10-mobile">
+			<section class="section-block-3 pt80 pt40-tablet pt10-mobile" 
+				style="background-image: url(assets/img/ImgFundoNew1.JPG); 
+						background-repeat: no-repeat;
+						background-size: cover;
+						margin-bottom: -110px;">
 				<div class="wrap wide">
 					<div class="is-relative">
-
-
 						<picture>
 							<source srcset="assets/img/imggaleriaprovince/img14.webp">
 							<img src="#" alt="" class="bdr1 is-block waypoint animation_bottom" loading="lazy"
@@ -822,6 +900,7 @@
 				</div>
 			</section>
 
+
 			<section class="section-regiao mt90 mt50-tablet mt50-mobile"
 				style="background-image: url('assets/img/portoBeloImg.png');">
 				<div class="wrap wide pl20-mobile pr20-mobile">
@@ -830,18 +909,12 @@
 
 						<div class="column is-1 is-relative is-hidden-mobile">
 							<div class="line"></div>
-
-
-							<picture>
-
-							</picture>
 						</div>
 
 						<div class="column is-5-tablet is-12-mobile">
 
 							<div class="color-white mt60 pl30 pr60 pr30-mobile mt50-mobile" style="height: 500px;">
 
-								<!-- <h2 class="mb20 color-light waypoint animation_bottom">POR QUE ITAPEMA?</h2> -->
 
 								<h2 class="mb20 color-light box-letter">
 									<div class="waypoint animation_bottom fade-in-letter"
@@ -987,9 +1060,7 @@
 
 
 
-
-			</br></br></br></br>
-			<div class="section-newsletter pt40 pb90 pb50-mobile" style="background-color: #fff;">
+			<div class="section-newsletter pt40 pb90 pb50-mobile" style="background-color: #fff; margin-bottom: -90px;">
 				<div class="wrap wide">
 
 					<div class=" bdr1 pt30 pb30 mb40 waypoint animation_scale_x" style="background-color: #5C4633;">
@@ -1105,7 +1176,8 @@
 
 							<div class="columns is-mobile is-variable is-2 mt20 box-logos   ">
 								<div class="column is-narrow-tablet is-4-mobile pr25-mobile">
-									<p><i class="fa-solid fa-phone-volume" style="color: #fff;"></i> (47) 9 9905-6904</p>
+									<p><i class="fa-solid fa-phone-volume" style="color: #fff; font-size: 10pt;"></i>
+										(47) 9 9905-6904</p>
 									<p><i class="fa-brands fa-whatsapp" style="color: #fff;"></i> (47) 9 9710-1001</p>
 									<p><i class="fa-brands fa-instagram" style="color: #fff;"></i>
 										@mtrentoempreendimentos</p>
@@ -1152,7 +1224,7 @@
 		</div> <!-- /CLOSE SCROLL-CONTENT -->
 	</main> <!-- /MAIN -->
 
-
+	<!--
 	<div class="bts-fixed is-clickable waypoint animation_right_dd2 animated ">
 
 		<div class="symbol bdr1" style="background-color: #B8996C;">
@@ -1172,7 +1244,7 @@
 		</div>
 
 	</div>
-
+	-->
 
 	<script src="assets/js/smooth-scroll-west.min.js"></script>
 	<script src="assets/js/jquery-3.7.1.min.js"></script>
@@ -1200,23 +1272,23 @@
 
 	<script>
 		document.addEventListener('DOMContentLoaded', (event) => {
-    const slides = document.querySelectorAll('.carousel-container .li');
-    let currentSlide = 0;
+			const slides = document.querySelectorAll('.carousel-container .li');
+			let currentSlide = 0;
 
-    function showNextSlide() {
-        // Remove a classe 'active' do slide atual
-        slides[currentSlide].classList.remove('active');
+			function showNextSlide() {
+				// Remove a classe 'active' do slide atual
+				slides[currentSlide].classList.remove('active');
 
-        // Calcula o índice do próximo slide
-        currentSlide = (currentSlide + 1) % slides.length;
+				// Calcula o índice do próximo slide
+				currentSlide = (currentSlide + 1) % slides.length;
 
-        // Adiciona a classe 'active' ao próximo slide
-        slides[currentSlide].classList.add('active');
-    }
+				// Adiciona a classe 'active' ao próximo slide
+				slides[currentSlide].classList.add('active');
+			}
 
-    // Altere este valor de 5000 para 2000
-    setInterval(showNextSlide, 2000);
-});
+			// Altere este valor de 5000 para 2000
+			setInterval(showNextSlide, 2000);
+		});
 	</script>
 </body>
 
